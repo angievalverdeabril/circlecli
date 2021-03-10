@@ -13,15 +13,15 @@ test('get title of the current page - Google', async () => {
     expect(title).toBe('Google');
 });
 
-test('get textbox value', async () => {   
-    const value =  await fnc.setTextBox(driver, termToSearch);
-    expect(value).toBe(termToSearch);
-});
+// test('get textbox value', async () => {   
+//     const value =  await fnc.setTextBox(driver, termToSearch);
+//     expect(value).toBe(termToSearch);
+// });
 
-test('get results values', async () => {   
-  const value =  await fnc.getResults(driver);
-  console.log("los resultados " +  value + ";");
-  expect(value).toEqual(value);
-  driver.quit();
-});
+// test('get results values', async () => {   
+//   const value =  await fnc.getResults(driver);
+//   console.log("los resultados " +  value + ";");
+//   expect(value).toEqual(value);
+//   driver.quit();
+// });
 
