@@ -4,7 +4,10 @@ const {Builder , By, Key, until} = require("selenium-webdriver");
 
 async function getResults(driver){
     let foo = await driver.wait(until.elementLocated(By.id('result-stats')), 30000, 'Timed out after 30 seconds', 5000);
-    return foo.getAttribute('innerHTML');
+    if(foo != undefined)
+        return foo.getAttribute('innerHTML');
+    else
+        return 'Item not found'
 }
 async function setTextBox(driver, termToSearch){
     await driver.findElement(By.name("q")).sendKeys(termToSearch, Key.RETURN);
