@@ -1,4 +1,6 @@
 const {Builder , By, Key, until} = require("selenium-webdriver");
+//Change user name and password of my terminal
+
 
 async function getResults(driver){
     let foo = await driver.wait(until.elementLocated(By.id('result-stats')), 30000, 'Timed out after 30 seconds', 5000);
