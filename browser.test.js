@@ -19,6 +19,7 @@ test('get textbox value', async () => {
 });
 
 test('get results values', async () => {   
+  //added a line comment
   const value =  await fnc.getResults(driver);
   console.log("los resultados " +  value + ";");
   expect(value).toEqual(value);
