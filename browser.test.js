@@ -1,6 +1,6 @@
 const {Builder} = require("selenium-webdriver");
 const fnc = require('./index');
-const termToSearch = "Egipto luxor";
+const termToSearch = "juan and@";
 
 jest.setTimeout(30000);
 
@@ -22,7 +22,7 @@ test('get results values', async () => {
   //voy a arreglar el error
   const value =  await fnc.getResults(driver);
   console.log("los resultados " +  value + ";");
-  expect(value).toEqual(value);
+  expect(value).toEqual("value");
   driver.quit();
 });
 
